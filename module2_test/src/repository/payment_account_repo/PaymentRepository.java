@@ -62,7 +62,7 @@ public class PaymentRepository implements IPaymentRepository {
     public PaymentAccount searchPaymentAccountByName(String name) {
         List<PaymentAccount> paymentAccountList = findAll();
         for (int i = 0; i < paymentAccountList.size(); i++) {
-            if (paymentAccountList.get(i).getInfoToCSV().equals(name)) {
+            if (paymentAccountList.get(i).getCustomerName().equals(name)) {
                 return paymentAccountList.get(i);
             }
         }
